@@ -1,12 +1,20 @@
 package me.devupdates.millenaireReborn.common.registry;
 
+import javax.tools.Tool;
+
 import me.devupdates.millenaireReborn.MillenaireReborn;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 /**
@@ -233,6 +241,10 @@ public class MillItems {
     public static Item UNKNOWN_POWDER;
 
     // TODO: Tool und Armor Materials später implementieren wenn wir die korrekte 1.21.8 API gefunden haben
+    public static final ToolMaterial NORMAN_TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 10.0F, 4.0F, 10, ItemTags.DIAMOND_TOOL_MATERIALS);
+    public static final ToolMaterial BYZANTINE_TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 12.0F, 3.0F, 15, ItemTags.DIAMOND_TOOL_MATERIALS);
+    public static final ToolMaterial OBSIDIAN_TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 6.0F, 2.0F, 25, ItemTags.DIAMOND_TOOL_MATERIALS);
+    public static final ToolMaterial BETTER_STEEL_TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 5.0F, 3.0F, 10, ItemTags.DIAMOND_TOOL_MATERIALS);
     
     /**
      * Erstellt Item-Settings mit korrekter Registry-Key
@@ -290,11 +302,11 @@ public class MillItems {
             new BlockItem(MillBlocks.INDIAN_STONE_ORNAMENT, createSettings("indian_stone_ornament")));
 
         // Norman Tools (erstmal als basic Items - später zu richtigen Tools upgraden)
-        NORMAN_PICKAXE = register("normanpickaxe", new Item(createSettings("normanpickaxe")));
-        NORMAN_AXE = register("normanaxe", new Item(createSettings("normanaxe")));
-        NORMAN_SHOVEL = register("normanshovel", new Item(createSettings("normanshovel")));
-        NORMAN_HOE = register("normanhoe", new Item(createSettings("normanhoe")));
-        NORMAN_BROADSWORD = register("normanbroadsword", new Item(createSettings("normanbroadsword")));
+        NORMAN_PICKAXE = register("normanpickaxe", new Item(createSettings("normanpickaxe").pickaxe(NORMAN_TOOL_MATERIAL, 1, -2.8f)));
+        NORMAN_AXE = register("normanaxe", new AxeItem(NORMAN_TOOL_MATERIAL, 4, -3, createSettings("normanaxe")));
+        NORMAN_SHOVEL = register("normanshovel", new ShovelItem(NORMAN_TOOL_MATERIAL, 1.5f, -3, createSettings("normanshovel")));
+        NORMAN_HOE = register("normanhoe", new HoeItem(NORMAN_TOOL_MATERIAL, -4, 1, createSettings("normanhoe")));
+        NORMAN_BROADSWORD = register("normanbroadsword", new Item(createSettings("normanbroadsword").sword(NORMAN_TOOL_MATERIAL, 3, -2.4f)));
 
         // Norman Armor (erstmal als basic Items - später zu richtiger Armor upgraden)
         NORMAN_HELMET = register("normanhelmet", new Item(createSettings("normanhelmet")));
@@ -310,11 +322,11 @@ public class MillItems {
 
         // BYZANTINE ITEMS
         // Byzantine Tools (als Items - später zu Tools upgraden)
-        BYZANTINE_PICKAXE = register("byzantinepickaxe", new Item(createSettings("byzantinepickaxe")));
-        BYZANTINE_AXE = register("byzantineaxe", new Item(createSettings("byzantineaxe")));
-        BYZANTINE_SHOVEL = register("byzantineshovel", new Item(createSettings("byzantineshovel")));
-        BYZANTINE_HOE = register("byzantinehoe", new Item(createSettings("byzantinehoe")));
-        BYZANTINE_MACE = register("byzantinemace", new Item(createSettings("byzantinemace")));
+        BYZANTINE_PICKAXE = register("byzantinepickaxe", new Item(createSettings("byzantinepickaxe").pickaxe(BYZANTINE_TOOL_MATERIAL, 1, -2.8f)));
+        BYZANTINE_AXE = register("byzantineaxe", new AxeItem(BYZANTINE_TOOL_MATERIAL, 5, -3, createSettings("byzantineaxe")));
+        BYZANTINE_SHOVEL = register("byzantineshovel", new ShovelItem(BYZANTINE_TOOL_MATERIAL, 1.5f, -3, createSettings("byzantineshovel")));
+        BYZANTINE_HOE = register("byzantinehoe", new HoeItem(BYZANTINE_TOOL_MATERIAL, -3, 0, createSettings("byzantinehoe")));
+        BYZANTINE_MACE = register("byzantinemace", new Item(createSettings("byzantinemace").sword(BYZANTINE_TOOL_MATERIAL, 2, -2.4f)));
 
         // Byzantine Armor (als Items - später zu Armor upgraden)
         BYZANTINE_HELMET = register("byzantinehelmet", new Item(createSettings("byzantinehelmet")));
@@ -333,7 +345,7 @@ public class MillItems {
 
         // JAPANESE ITEMS
         // Japanese Weapons (als Items - später zu richtigen Weapons upgraden)
-        TACHI_SWORD = register("tachisword", new Item(createSettings("tachisword")));
+        TACHI_SWORD = register("tachisword", new Item(createSettings("tachisword").sword(BETTER_STEEL_TOOL_MATERIAL, 2, -2.4f)));
         YUMI_BOW = register("yumibow", new Item(createSettings("yumibow").maxCount(1)));
 
         // Japanese Red Samurai Armor
@@ -362,11 +374,11 @@ public class MillItems {
 
         // MAYAN ITEMS  
         // Mayan Tools (als Items - später zu Tools upgraden)
-        MAYAN_PICKAXE = register("mayanpickaxe", new Item(createSettings("mayanpickaxe")));
-        MAYAN_AXE = register("mayanaxe", new Item(createSettings("mayanaxe")));
-        MAYAN_SHOVEL = register("mayanshovel", new Item(createSettings("mayanshovel")));
-        MAYAN_HOE = register("mayanhoe", new Item(createSettings("mayanhoe")));
-        MAYAN_MACE = register("mayanmace", new Item(createSettings("mayanmace")));
+        MAYAN_PICKAXE = register("mayanpickaxe", new Item(createSettings("mayanpickaxe").pickaxe(OBSIDIAN_TOOL_MATERIAL, 1, -2.8f)));
+        MAYAN_AXE = register("mayanaxe", new AxeItem(OBSIDIAN_TOOL_MATERIAL, 6, -3, createSettings("mayanaxe")));
+        MAYAN_SHOVEL = register("mayanshovel", new ShovelItem(OBSIDIAN_TOOL_MATERIAL, 1.5f, -3, createSettings("mayanshovel")));
+        MAYAN_HOE = register("mayanhoe", new HoeItem(OBSIDIAN_TOOL_MATERIAL, -2, -1, createSettings("mayanhoe")));
+        MAYAN_MACE = register("mayanmace", new Item(createSettings("mayanmace").sword(OBSIDIAN_TOOL_MATERIAL, 3, -2.4f)));
         MAYAN_QUEST_CROWN = register("mayanquestcrown", new Item(createSettings("mayanquestcrown").maxCount(1)));
 
         // Mayan Parchments
@@ -396,7 +408,7 @@ public class MillItems {
 
         // SELJUK ITEMS
         // Seljuk Weapons (als Items - später zu richtigen Weapons upgraden)
-        SELJUK_SCIMITAR = register("seljukscimitar", new Item(createSettings("seljukscimitar")));
+        SELJUK_SCIMITAR = register("seljukscimitar", new Item(createSettings("seljukscimitar").sword(BETTER_STEEL_TOOL_MATERIAL, 3, -2.4f)));
         SELJUK_BOW = register("seljukbow", new Item(createSettings("seljukbow").maxCount(1)));
 
         // Seljuk Armor (als Items - später zu Armor upgraden)
@@ -425,7 +437,7 @@ public class MillItems {
 
         // INUIT ITEMS
         // Inuit Weapons & Tools (als Items - später zu richtigen Tools upgraden)
-        INUIT_TRIDENT = register("inuittrident", new Item(createSettings("inuittrident")));
+        INUIT_TRIDENT = register("inuittrident", new Item(createSettings("inuittrident").sword(ToolMaterial.IRON, 3, -2.4f)));
         INUIT_BOW = register("inuitbow", new Item(createSettings("inuitbow").maxCount(1)));
         ULU = register("ulu", new Item(createSettings("ulu").maxCount(1)));
 
