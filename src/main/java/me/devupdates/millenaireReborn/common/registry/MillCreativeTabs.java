@@ -78,6 +78,13 @@ public class MillCreativeTabs {
                 entries.add(MillItems.PARCHMENT_NORMAN_ITEMS);
                 entries.add(MillItems.PARCHMENT_NORMAN_BUILDINGS);
                 entries.add(MillItems.PARCHMENT_NORMAN_FULL);
+
+                // Norman Foods
+                entries.add(MillItems.CIDER_APPLE);
+                entries.add(MillItems.CIDER);
+                entries.add(MillItems.BOUDIN);
+                entries.add(MillItems.CALVA);
+                entries.add(MillItems.TRIPES);
             })
             .build());
 
@@ -107,6 +114,15 @@ public class MillCreativeTabs {
                 // Byzantine Clothes
                 entries.add(MillItems.BYZANTINE_CLOTH_WOOL);
                 entries.add(MillItems.BYZANTINE_CLOTH_SILK);
+
+                // Byzantine Foods & Seeds
+                entries.add(MillItems.GRAPES);
+                entries.add(MillItems.WINE_BASIC);
+                entries.add(MillItems.WINE_FANCY);
+                entries.add(MillItems.FETA);
+                entries.add(MillItems.SOUVLAKI);
+                entries.add(MillItems.OLIVES);
+                entries.add(MillItems.OLIVE_OIL);
             })
             .build());
 
@@ -142,6 +158,13 @@ public class MillCreativeTabs {
                 entries.add(MillItems.PARCHMENT_JAPANESE_ITEMS);
                 entries.add(MillItems.PARCHMENT_JAPANESE_BUILDINGS);
                 entries.add(MillItems.PARCHMENT_JAPANESE_FULL);
+
+                // Japanese Foods
+                entries.add(MillItems.SAKE);
+                entries.add(MillItems.UDON);
+                entries.add(MillItems.IKAYAKI);
+                entries.add(MillItems.CHERRIES);
+                entries.add(MillItems.CHERRY_BLOSSOM);
             })
             .build());
 
@@ -163,6 +186,14 @@ public class MillCreativeTabs {
                 entries.add(MillItems.PARCHMENT_MAYAN_ITEMS);
                 entries.add(MillItems.PARCHMENT_MAYAN_BUILDINGS);
                 entries.add(MillItems.PARCHMENT_MAYAN_FULL);
+
+                // Mayan Foods & Seeds
+                entries.add(MillItems.MAIZE);
+                entries.add(MillItems.MASA);
+                entries.add(MillItems.WAH);
+                entries.add(MillItems.BALCHE);
+                entries.add(MillItems.SIKIL_PAH);
+                entries.add(MillItems.CACAUHAA);
             })
             .build());
 
@@ -170,14 +201,7 @@ public class MillCreativeTabs {
         Registry.register(Registries.ITEM_GROUP, MILLENAIRE_INDIAN, FabricItemGroup.builder()
             .icon(() -> new ItemStack(MillItems.INDIAN_STATUE))
             .displayName(Text.translatable("itemgroup.millenaire-reborn.indian"))
-            .entries((displayContext, entries) -> {
-                // Indian Seeds & Food
-                entries.add(MillItems.RICE);
-                entries.add(MillItems.TURMERIC);
-                entries.add(MillItems.VEG_CURRY);
-                entries.add(MillItems.CHICKEN_CURRY);
-                entries.add(MillItems.RASGULLA);
-                
+            .entries((displayContext, entries) -> {                
                 // Indian Decorations
                 entries.add(MillItems.INDIAN_STATUE);
                 entries.add(MillItems.BRICK_MOULD);
@@ -188,6 +212,13 @@ public class MillCreativeTabs {
                 entries.add(MillItems.PARCHMENT_INDIAN_BUILDINGS);
                 entries.add(MillItems.PARCHMENT_INDIAN_FULL);
                 entries.add(MillItems.PARCHMENT_SADHU);
+
+                // Indian Seeds & Food
+                entries.add(MillItems.RICE);
+                entries.add(MillItems.TURMERIC);
+                entries.add(MillItems.VEG_CURRY);
+                entries.add(MillItems.CHICKEN_CURRY);
+                entries.add(MillItems.RASGULLA);
             })
             .build());
 
@@ -207,14 +238,6 @@ public class MillCreativeTabs {
                 entries.add(MillItems.SELJUK_LEGS);
                 entries.add(MillItems.SELJUK_BOOTS);
                 
-                // Seljuk Foods
-                entries.add(MillItems.YOGURT);
-                entries.add(MillItems.AYRAN);
-                entries.add(MillItems.PIDE);
-                entries.add(MillItems.LOKUM);
-                entries.add(MillItems.HELVA);
-                entries.add(MillItems.PISTACHIOS);
-                
                 // Seljuk Decorations
                 entries.add(MillItems.WALL_CARPET_SMALL);
                 entries.add(MillItems.WALL_CARPET_MEDIUM);
@@ -223,6 +246,14 @@ public class MillCreativeTabs {
                 // Seljuk Clothes
                 entries.add(MillItems.SELJUK_CLOTH_WOOL);
                 entries.add(MillItems.SELJUK_CLOTH_COTTON);
+
+                // Seljuk Foods
+                entries.add(MillItems.YOGURT);
+                entries.add(MillItems.AYRAN);
+                entries.add(MillItems.PIDE);
+                entries.add(MillItems.LOKUM);
+                entries.add(MillItems.HELVA);
+                entries.add(MillItems.PISTACHIOS);
             })
             .build());
 
@@ -242,6 +273,10 @@ public class MillCreativeTabs {
                 entries.add(MillItems.FUR_LEGS);
                 entries.add(MillItems.FUR_BOOTS);
                 
+                // Inuit Materials
+                entries.add(MillItems.TANNED_HIDE);
+                entries.add(MillItems.HIDE_HANGING);
+
                 // Inuit Foods
                 entries.add(MillItems.BEAR_MEAT_RAW);
                 entries.add(MillItems.BEAR_MEAT_COOKED);
@@ -252,10 +287,6 @@ public class MillCreativeTabs {
                 entries.add(MillItems.INUIT_BEAR_STEW);
                 entries.add(MillItems.INUIT_MEATY_STEW);
                 entries.add(MillItems.INUIT_POTATO_STEW);
-                
-                // Inuit Materials
-                entries.add(MillItems.TANNED_HIDE);
-                entries.add(MillItems.HIDE_HANGING);
             })
             .build());
 
@@ -264,25 +295,53 @@ public class MillCreativeTabs {
             .icon(() -> new ItemStack(MillItems.SAKE))
             .displayName(Text.translatable("itemgroup.millenaire-reborn.food"))
             .entries((displayContext, entries) -> {
-                // Special Foods
+                // Norman Foods
+                entries.add(MillItems.CIDER_APPLE);
+                entries.add(MillItems.CIDER);
+                entries.add(MillItems.BOUDIN);
+                entries.add(MillItems.CALVA);
+                entries.add(MillItems.TRIPES);
+
+                // Byzantine Foods & Seeds
+                entries.add(MillItems.GRAPES);
+                entries.add(MillItems.WINE_BASIC);
+                entries.add(MillItems.WINE_FANCY);
+                entries.add(MillItems.FETA);
+                entries.add(MillItems.SOUVLAKI);
+                entries.add(MillItems.OLIVES);
+                entries.add(MillItems.OLIVE_OIL);
+
+                // Japanese Foods
                 entries.add(MillItems.SAKE);
                 entries.add(MillItems.UDON);
                 entries.add(MillItems.IKAYAKI);
-                entries.add(MillItems.WINE_BASIC);
-                entries.add(MillItems.WINE_FANCY);
-                entries.add(MillItems.SOUVLAKI);
-                entries.add(MillItems.FETA);
-                
-                // Cultural Foods (Übersicht)
+                entries.add(MillItems.CHERRIES);
+                entries.add(MillItems.CHERRY_BLOSSOM);
+
+                // Mayan Foods & Seeds
+                entries.add(MillItems.MAIZE);
+                entries.add(MillItems.MASA);
+                entries.add(MillItems.WAH);
+                entries.add(MillItems.BALCHE);
+                entries.add(MillItems.SIKIL_PAH);
+                entries.add(MillItems.CACAUHAA);
+
+                // Indian Seeds & Food
+                entries.add(MillItems.RICE);
+                entries.add(MillItems.TURMERIC);
                 entries.add(MillItems.VEG_CURRY);
                 entries.add(MillItems.CHICKEN_CURRY);
                 entries.add(MillItems.RASGULLA);
+
+                // Seljuk Foods
                 entries.add(MillItems.YOGURT);
                 entries.add(MillItems.AYRAN);
                 entries.add(MillItems.PIDE);
                 entries.add(MillItems.LOKUM);
                 entries.add(MillItems.HELVA);
                 entries.add(MillItems.PISTACHIOS);
+
+                // Inuit Foods
                 entries.add(MillItems.BEAR_MEAT_RAW);
                 entries.add(MillItems.BEAR_MEAT_COOKED);
                 entries.add(MillItems.WOLF_MEAT_RAW);
@@ -291,7 +350,7 @@ public class MillCreativeTabs {
                 entries.add(MillItems.SEAFOOD_COOKED);
                 entries.add(MillItems.INUIT_BEAR_STEW);
                 entries.add(MillItems.INUIT_MEATY_STEW);
-                entries.add(MillItems.INUIT_POTATO_STEW);
+                entries.add(MillItems.INUIT_POTATO_STEW);                
             })
             .build());
 
