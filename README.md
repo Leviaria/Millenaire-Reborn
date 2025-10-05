@@ -29,7 +29,7 @@ Originally based on the final Forge release (1.12.2), this project brings the im
 | Cultural Items (163 items) | ✅ Complete |
 | Asset Pipeline | ✅ Complete |
 | Creative Mode Integration | ✅ Complete |
-| Advanced Item Functionality | 📅 Planned |
+| Advanced Item Functionality | 🚧 In Progress |
 | Block System (200+ blocks) | 🚧 In Progress |
 | Entity System & AI | 📅 Planned |
 | Village Generation | 🚧 In Progress |

@@ -8,7 +8,7 @@ Porting Millénaire from Minecraft 1.12.2 Forge to 1.21.8 Fabric.
 |-------|--------|-----------|
 | 1. Basic Infrastructure | Complete | 2-3 days |
 | 2. Basic Items & Localization | Complete | 3-4 days |
-| 3. Advanced Item Functionality | Planned | ~1 week |
+| 3. Advanced Item Functionality | In Progress | ~1 week |
 | 4. Blocks & World Generation | In Progress | ~2 weeks |
 | 5. Entities & Villagers | Planned | ~2 weeks |
 | 6. World Generation & Structures | Planned | ~3 weeks |
@@ -54,20 +54,20 @@ Result: All basic items work, are localized and organized in Creative Tabs.
 
 **Status:** In Progress
 
-- [ ] Tool Functionality
-  - [ ] Define Tool Materials (Norman, Byzantine, etc.)
-  - [ ] Mining Speed, Durability, Attack Damage
-  - [ ] Special Effects (e.g. Mayan Quest Crown)
-- [ ] Armor Functionality
-  - [ ] Define Armor Materials
-  - [ ] Protection Values, Durability
-  - [ ] Armor Rendering for all cultures
+- [x] Tool Functionality
+  - [x] Define Tool Materials (Norman, Byzantine, etc.)
+  - [x] Mining Speed, Durability, Attack Damage
+  - [x] Special Effects (e.g. Mayan Quest Crown)
+- [x] Armor Functionality
+  - [x] Define Armor Materials
+  - [x] Protection Values, Durability
+  - [x] Armor Rendering for all cultures
 - [ ] Bow Functionality
   - [ ] Yumi Bow, Seljuk Bow, Inuit Bow
   - [ ] Pull Animations
-- [ ] Food Items
-  - [ ] Hunger/Saturation Values
-  - [ ] Special Effects (e.g. Sake)
+- [x] Food Items
+  - [x] Hunger/Saturation Values
+  - [x] Special Effects (e.g. Sake)
 - [ ] Special Items
   - [ ] Amulet Effects
   - [ ] Paint Bucket Functionality
@@ -159,6 +159,7 @@ Result: All basic items work, are localized and organized in Creative Tabs.
 - 5 Basic Blocks implemented as examples
 - Creative Tabs for all cultures
 - Asset Pipeline fully functional
+- Armor, tools and food items
 
 ### Next Steps
 1. Make items functional (Tools, Armor, Food values)
